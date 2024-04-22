@@ -16,7 +16,7 @@
 //         } else {
 //             // Si la edad es menor que 18, mostrar un mensaje indicando que es menor
 //             console.log('Eres menor');
-//         }    
+//         }
 //     } else {
 //         // Si la entrada del usuario no es un número válido, mostrar un mensaje de error
 //         console.log('Pon un número válido');
@@ -47,29 +47,88 @@
 
 
 
-function calificación() {
+// function calificación() {
     
-    const nota = parseInt(prompt('Coloca la nota aqui: '));
+//     const nota = parseInt(prompt('Coloca la nota aqui: '));
 
-    if (!isNaN(nota)) {
-        if (0 <= nota && nota <= 2) {
-            console.log('muy insuficiente');
-        } else if (nota <= 3 && nota <= 4) {
-            console.log('insuficientemente');
-        } else if (5 <= nota && nota <= 6) {
-            console.log('Suficiente');
-        } else if (nota <= 7) {
-            console.log('Bien');
-        } else if (nota <= 8 && nota <= 9) {
-            console.log('Notable');
-        } else if (nota === 10) {
-            console.log('Sobresaliente')
-        } else {
-            console.log('Número erróneo');
-        }
-    } else {
+//     if (!isNaN(nota)) {
+//         if (0 <= nota && nota <= 2) {
+//             console.log('muy insuficiente');
+//         } else if (nota <= 3 && nota <= 4) {
+//             console.log('insuficientemente');
+//         } else if (5 <= nota && nota <= 6) {
+//             console.log('Suficiente');
+//         } else if (nota <= 7) {
+//             console.log('Bien');
+//         } else if (nota <= 8 && nota <= 9) {
+//             console.log('Notable');
+//         } else if (nota === 10) {
+//             console.log('Sobresaliente')
+//         } else {
+//             console.log('Número erróneo');
+//         }
+//     } else {
         
-        console.log('Introduce un número válido');
+//         console.log('Introduce un número válido');
+//     }
+// }
+// calificación();
+
+// 3- Realiza un script que pida cadenas de texto  hasta que se pulse “cancelar”.
+//Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -.
+
+// Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp
+// let resultado = '';
+// do {
+// 	let palabra = prompt('Ingresa una palabra');
+// 	if (resultado == '') {
+// 		//si es la primer palabra, concateno sin usar el guion
+// 		resultado = palabra;
+// 	} else {
+// 		resultado = resultado + '-' + palabra;
+// 	}
+// } while ( confirm('¿Desea continuar?'));
+
+// document.write(resultado);
+
+
+// 4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un
+// número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con
+// “cancelar” deberá indicarse la suma total de los números introducido
+
+// let numero = 0;
+// let suma = 0;
+
+// do {
+//     numero = prompt('Ingresa tu numero: ');
+
+//     if (!isNaN(parseInt(numero)) && numero != null) {
+//         suma = suma + parseInt(numero);
+//         console.log('suma: ' + suma);
+//     } else {
+//         if (numero != null) {
+//             alert(`${numero} no es un numero`);
+//         }
+//     }
+// } while (numero != null);
+
+// document.write(`total: ${suma}`);
+
+// 6- Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma :
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// .......
+// Dificultad: 🟢🟡
+
+for (let i=1; i<=30; i++) {
+    
+    for (let rep=0; rep < i; rep++) {
+        document.write(i);
     }
+    document.write("<br>");
+
 }
-calificación(); 
