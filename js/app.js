@@ -124,11 +124,35 @@
 // .......
 // Dificultad: 🟢🟡
 
-for (let i=1; i<=30; i++) {
+// for (let i=1; i<=30; i++) {
     
-    for (let rep=0; rep < i; rep++) {
-        document.write(i);
-    }
-    document.write("<br>");
+//     for (let rep=0; rep < i; rep++) {
+//         document.write(i);
+//     }
+//     document.write("<br>");
 
+// }
+
+//solicitar un numero 
+let numero = parseInt(prompt("Ingresa un numero de repeticiones entre 1 y 50"));
+//verifico si es un numero
+if (!isNaN(numero)) {
+    //verifico si el numero esta entre 1 y 50 
+    if (numero >= 1 && numero <= 50) {
+        //bucle que comienza desde numero hasta 1  
+        for (let i = numero; i >= 1; i--) {
+            //bucle interno desde i hasta 1
+            for(let rep = i; rep >= 1; rep--) {
+                document.write(i);
+            }
+            document.write("<br>");
+        }
+
+        
+    } else {
+        alert("El numero debe estar entre 1 y 50");
+    }
+     
+} else {
+    alert("El numero debe ser un numero");
 }
