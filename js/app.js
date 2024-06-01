@@ -132,27 +132,72 @@
 //     document.write("<br>");
 
 // }
+// 7- Haz un script que escriba una pirámide inversa de los números del 1 al número
+// que indique el usuario (no mayor de 50) de la siguiente forma : (suponiendo que
+// indica 30).
 
-//solicitar un numero 
-let numero = parseInt(prompt("Ingresa un numero de repeticiones entre 1 y 50"));
-//verifico si es un numero
-if (!isNaN(numero)) {
-    //verifico si el numero esta entre 1 y 50 
-    if (numero >= 1 && numero <= 50) {
-        //bucle que comienza desde numero hasta 1  
-        for (let i = numero; i >= 1; i--) {
-            //bucle interno desde i hasta 1
-            for(let rep = i; rep >= 1; rep--) {
-                document.write(i);
-            }
-            document.write("<br>");
-        }
+//solicitar un numero
+// let numero = parseInt(prompt("Ingresa un numero de repeticiones entre 1 y 50"));
+// //verifico si es un numero
+// if (!isNaN(numero)) {
+//     //verifico si el numero esta entre 1 y 50
+//     if (numero >= 1 && numero <= 50) {
+//         //bucle que comienza desde numero hasta 1
+//         for (let i = numero; i >= 1; i--) {
+//             //bucle interno desde i hasta 1
+//             for(let rep = i; rep >= 1; rep--) {
+//                 document.write(i);
+//             }
+//             document.write("<br>");
+//         }
 
         
+//     } else {
+//         alert("El numero debe estar entre 1 y 50");
+//     }
+     
+// } else {
+//     alert("El numero debe ser un numero");
+// }
+
+// 8- Crea script para generar pirámide siguiente con los números del 1 al número
+// que indique el usuario (no mayor de 50
+
+// 1. creamos un prompt en formato numero
+//2. verificamos
+//3 aplicamos un for
+
+
+// Solicita al usuario un número y lo convierte a un entero
+let numero = parseInt(prompt("coloque un numero no mayor al 50: "));
+
+// Verifica si la entrada es un número válido
+if (!isNaN(numero)) {
+    
+    // Verifica si el número está en el rango de 1 a 50
+    if (numero >= 1 && numero <= 50) {
+        
+        // Primer bucle 'for'
+        // Este bucle itera desde 0 hasta el valor de 'numero'
+        for (let i = 0; i <= numero; i++) {
+            
+            // Segundo bucle 'for'
+            // Este bucle imprime números secuenciales desde 1 hasta el valor actual de 'i'
+            for (let rep = 1; rep <= i; rep++) {
+                // Imprime el valor de 'rep' en el documento HTML
+                document.write(rep);
+            }
+            
+            // Imprime un salto de línea HTML después de que el segundo bucle ha terminado
+            document.write("<br>");
+        }
+        
     } else {
+        // Muestra una alerta si el número no está en el rango de 1 a 50
         alert("El numero debe estar entre 1 y 50");
     }
-     
+    
 } else {
+    // Muestra una alerta si la entrada no es un número
     alert("El numero debe ser un numero");
 }
